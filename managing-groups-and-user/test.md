@@ -1,15 +1,15 @@
-#Managing-groups-users
+# Managing-groups-users
 
-##I/File lưu trữ của các user
+## I/File lưu trữ của các user
 
-###1.Users
+### 1.Users
 
 user phân thành 2 loại chính là *supperuser(root)* và *normaluser*
 
 Đường dẫn:  
 ` /etc/passwd `
 
-###2.Thông tin về file ` /etc/passwd `
+### 2.Thông tin về file ` /etc/passwd `
 
 <img src="image/Untitled.png">
 
