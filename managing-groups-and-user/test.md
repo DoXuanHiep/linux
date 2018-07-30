@@ -7,13 +7,15 @@
    - user phân thành 2 loại chính là *supperuser(root)* và *normaluser* .
 
 Đường dẫn:  
-- ` /etc/passwd ` là file lữu trữ thông tin users.
+- `/etc/passwd` là file lữu trữ thông tin users.
 
 ### 2.Thông tin về file ` /etc/passwd `
 
-``` root:x:0:0:root:/root:/bin/bash
+```
+root:x:0:0:root:/root:/bin/bash
 
-hiep:x:500:500:doxuanhiep:/home/hiep:/bin/bash ```
+hiep:x:500:500:doxuanhiep:/home/hiep:/bin/bash
+```
 
 - Trong file chứa các người dùng có 7 trường mỗi trường ngăn cách nhau bởi dấu ` : ` .
 
