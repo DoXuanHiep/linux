@@ -7,15 +7,17 @@
    - user phân thành 2 loại chính là *supperuser(root)* và *normaluser* .
 
 Đường dẫn:  
-- ` /etc/passwd ` là file lữu trữ thông tin users.
+- `/etc/passwd` là file lữu trữ thông tin users.
 
-### 2.Thông tin về file ` /etc/passwd `
+### 2.Thông tin về file `/etc/passwd`
 
-``` root:x:0:0:root:/root:/bin/bash
+```
+root:x:0:0:root:/root:/bin/bash
 
-hiep:x:500:500:doxuanhiep:/home/hiep:/bin/bash ```
+hiep:x:500:500:doxuanhiep:/home/hiep:/bin/bash
+```
 
-- Trong file chứa các người dùng có 7 trường mỗi trường ngăn cách nhau bởi dấu ` : ` .
+- Trong file chứa các người dùng có 7 trường mỗi trường ngăn cách nhau bởi dấu `:` .
 
 - **Thông tin về từng trường**.
 
@@ -35,7 +37,7 @@ hiep:x:500:500:doxuanhiep:/home/hiep:/bin/bash ```
 
 ### 3.Mật khẩu user
 
-- Đường dẫn: ` /etc/shadow `
+- Đường dẫn: `/etc/shadow`
 
 ``` 
 root:$6$elt9KOt1$eDLOKG89.ideC5D8vT5w6AT7/UxyoYXuBrTIa5r3EVTMn78e/.orHkWrgeKWxi9DO860T2wPoabfKhMumXKfC0:17692:0:99999:7:::
@@ -44,17 +46,17 @@ nslcd:!!:17256::::::
 hiep:$6$KJ8Cid.C7eM926D9$0hl1ZBId0IhGeJGsbyHWILQ9o30BHNQhEVAdXCm9GOU32qdu1caWXxMbIBAEH.iBAhKwBu2rCkorQKZTW6fJC0:17683:0:99999:7::: 
 ```
 
-- Trong file ` /etc/shadow ` lưu trữ thông tin về mật khẩu của users.
+- Trong file `/etc/shadow` lưu trữ thông tin về mật khẩu của users.
 
-- Trong file chứa thông tin về người dùng có tổng cộng 9 trường thông tin dược ngăn cách với nhau bởi dấu ` : ` .
+- Trong file chứa thông tin về người dùng có tổng cộng 9 trường thông tin dược ngăn cách với nhau bởi dấu `:` .
 
 - **Thông tin về tường trường.**
 
    - Trường đầu nói về **username(tên người dùng)**.
 
-   - Trường thứ hai nói về mật khẩu của user đã được mã hóa. Những user nào mật khẩu  có kí tự là ` * ` là đã chết, chứa kí tự ` !! ` thì chưa tạo mật khẩu.
+   - Trường thứ hai nói về mật khẩu của user đã được mã hóa. Những user nào mật khẩu  có kí tự là `*` là đã chết, chứa kí tự `!!` thì chưa tạo mật khẩu.
 
-   - Trường thứ ba nói về lần đặt mật khẩu cuối cùng của user có số ngày tính bằng ` thời gian đặt mật khẩu trừ đi ngày 1 tháng 1 năm 1970 ` .
+   - Trường thứ ba nói về lần đặt mật khẩu cuối cùng của user có số ngày tính bằng `thời gian đặt mật khẩu trừ đi ngày 1 tháng 1 năm 1970` .
 
    - Trường thứ tư nói về số ngày tối thiểu giữa hai lần thay đổi mật khẩu.
 
@@ -72,20 +74,20 @@ hiep:$6$KJ8Cid.C7eM926D9$0hl1ZBId0IhGeJGsbyHWILQ9o30BHNQhEVAdXCm9GOU32qdu1caWXxM
 
 - Đường dẫn tới file quản lí group.
 
-` /etc/group `
+`/etc/group`
 
 ``` 
 root:x:0:
 hiep:x:500:
 ```
 
-- Trong file chứa thông tin về người dùng có bốn trường thông tin được ngăn cách nhau bởi dấu ` : ` .
+- Trong file chứa thông tin về người dùng có bốn trường thông tin được ngăn cách nhau bởi dấu `:` .
 
 - **Thông tin về từng trường.** 
 
    - Trường thứ nhất nói về *groupname(tên nhóm)*.
 
-   - Trường thứ hai nói về mật khẩu của group đã được ẩn đi bởi chữ ` x ` .
+   - Trường thứ hai nói về mật khẩu của group đã được ẩn đi bởi chữ `x` .
 
    - Trường thứ ba nói về GID.
 
