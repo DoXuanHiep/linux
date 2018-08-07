@@ -91,11 +91,73 @@ hiep:x:500:
 
    - Trường thứ ba nói về GID.
 
-   - Trường thứ tư nói về những người có trong nhóm đó.    
+   - Trường thứ tư nói về những người có trong nhóm đó.
 
+### 5.Mật khẩu của groups.
+
+-Đường dẫn `/etc/gshadow`.
+
+```
+root:::
+hiep:!!::
+```
+- Trong file chứa thông tin về mật khẩu của nhóm người dùng có 4 trường thông tin và được ngăn cách nhau bởi dấu `:`.
+
+- **Thông tin về từng trường**.   
    
-   
+   - Trường thứ nhất nói về *groupname(tên nhóm)*.
 
+   - Trường thứ hai nói về *mật khẩu group*.
 
+   - Trường thứ ba nói về *người quản lí group đó*.
 
+   - Trường thứ tư nói về *những người thuộc group đó*.
 
+###6.Các câu lệnh quản lí users và groups
+
+- Add new user and group.
+
+   - useradd  [option] *username*.
+      - Ex: useradd  hiep: add user hiep.
+
+   - groupadd [option] *groupname*.
+
+      - Ex:group lab :add group lab.
+- Add old user to group.
+
+   - usermod  -a  -G group *username*.
+
+      - Ex: usermod –a –G lab hiep: add user hiep to group lab.
+   - gpasswd –a *user* *group*.
+
+      - Ex gpasswd –a son lab : add user son to group lab.
+   - gpasswd –d *user* *group*: delete user out of the group.
+      - Ex: gpasswd –d son lab: delete user son out of the group lab.
+- Delete user and group.
+   - userdel [option] *username*.
+      -Ex: userdel hiep : delete user hiep.
+   - groupdel [option] *group*.
+      -Ex: groupdel lab: delete group lab.
+- Change information  of user. 
+   -usermod [option] *username*.
+      - option:
+      - +. -L: lock user
+      - +. –U:unlock user
+      - +. -l: change user name
+      - Ex: usermod –l xhiep hiep: change username: hiep  xhiep.
+- Change information of group.
+   - groupmod [option] *group*
+      -option:
+      - +. -L: lock group
+      - +. -U: unlock group
+      - +. -n: change user name
+      - +. -c: change information of user
+      - Ex: groupmod –n lab group: change groupname: group  lab.
+- Change passwork of user. 
+   - passwd [option] *username*
+      - Ex: passwd hiep: change passwork user of hiep.
+`Note: Normally users only change passwork of them. Root user is privileged to change passwork all user.` .
+- Defend passwork.
+   - usermod -e *year-month-day* username: lock user when expiration.
+      - Ex: usermod -e 2018-6-23 hiep: hiep user will lock on 23/6/2018.
+   - Change the deadline of passwork: change [option] *username*.
